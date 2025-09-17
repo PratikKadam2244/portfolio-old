@@ -24,7 +24,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -33,7 +33,7 @@ export default function Education() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Education
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" />
@@ -48,12 +48,12 @@ export default function Education() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
             >
-              <Card className="hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-50 to-blue-50 border-0 shadow-lg">
+              <Card className="hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                     <div className="lg:col-span-3">
                       <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <h3 className="text-2xl font-bold text-gray-900">
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                           {edu.degree}
                         </h3>
                         <Badge 
@@ -67,7 +67,7 @@ export default function Education() {
                         </Badge>
                       </div>
                       
-                      <div className="flex flex-wrap items-center gap-6 mb-4 text-gray-600">
+                      <div className="flex flex-wrap items-center gap-6 mb-4 text-gray-600 dark:text-gray-300">
                         <div className="flex items-center gap-2">
                           <GraduationCap size={16} />
                           <span className="font-medium">{edu.institution}</span>
@@ -82,14 +82,14 @@ export default function Education() {
                         </div>
                       </div>
                       
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                         {edu.description}
                       </p>
                     </div>
                     
                     <div className="lg:col-span-1 flex lg:justify-end">
-                      <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-2xl">
-                        <GraduationCap size={48} className="text-blue-600 mx-auto" />
+                      <div className="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 p-6 rounded-2xl">
+                        <GraduationCap size={48} className="text-blue-600 dark:text-blue-400 mx-auto" />
                       </div>
                     </div>
                   </div>

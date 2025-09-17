@@ -28,7 +28,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -57,7 +57,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                className="p-3 bg-gray-800 dark:bg-gray-700 rounded-full hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors duration-300"
                 aria-label={social.label}
               >
                 <social.icon size={20} />
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-400 flex items-center justify-center gap-2">
+            <p className="text-gray-400 dark:text-gray-500 flex items-center justify-center gap-2">
               © {currentYear} Pratik Kadam. Made with
               <Heart size={16} className="text-red-500 fill-current" />
               using React & Tailwind CSS

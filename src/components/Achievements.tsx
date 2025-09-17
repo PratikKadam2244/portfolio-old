@@ -40,7 +40,7 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 bg-white">
+    <section id="achievements" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -49,7 +49,7 @@ export default function Achievements() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Achievements & Certifications
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" />
@@ -65,7 +65,7 @@ export default function Achievements() {
               transition={{ delay: index * 0.1, duration: 0.8 }}
               whileHover={{ y: -10 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-50 to-blue-50 border-0 shadow-lg">
+              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${achievement.color} flex-shrink-0`}>
@@ -74,7 +74,7 @@ export default function Achievements() {
                     
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-3 mb-3">
-                        <h3 className="text-xl font-bold text-gray-900">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                           {achievement.title}
                         </h3>
                         <Badge variant="secondary" className="bg-blue-100 text-blue-700">
@@ -82,11 +82,11 @@ export default function Achievements() {
                         </Badge>
                       </div>
                       
-                      <p className="text-blue-600 font-medium mb-3">
+                      <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
                         {achievement.organization}
                       </p>
                       
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                         {achievement.description}
                       </p>
                     </div>

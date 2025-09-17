@@ -26,7 +26,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -35,7 +35,7 @@ export default function Skills() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Technical Skills
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" />
@@ -50,13 +50,13 @@ export default function Skills() {
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1, duration: 0.8 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-white border-0 shadow-lg">
+              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="mb-6">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4`}>
                       <div className="w-6 h-6 bg-white rounded-md opacity-90" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                       {category.title}
                     </h3>
                   </div>

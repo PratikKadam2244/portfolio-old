@@ -49,7 +49,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -58,7 +58,7 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto" />
@@ -74,7 +74,7 @@ export default function Projects() {
               transition={{ delay: index * 0.1, duration: 0.8 }}
               whileHover={{ y: -10 }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-white border-0 shadow-lg overflow-hidden">
+              <Card className="h-full hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border-0 shadow-lg overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image}
@@ -82,18 +82,18 @@ export default function Projects() {
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-black/70 text-white">
+                    <Badge className="bg-black/70 dark:bg-white/20 text-white">
                       {project.type}
                     </Badge>
                   </div>
                 </div>
                 
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeProvider } from './providers/ThemeProvider';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -36,20 +37,22 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar activeSection={activeSection} />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Education />
-        <Skills />
-        <Achievements />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <Navbar activeSection={activeSection} />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Education />
+          <Skills />
+          <Achievements />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
